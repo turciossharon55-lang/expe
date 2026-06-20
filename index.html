@@ -11,7 +11,8 @@
         .header { background-color: #0056b3; padding: 20px; text-align: center; color: white; }
         .header h1 { font-size: 24px; margin-bottom: 15px; }
         .nav-buttons { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
-        .btn-nav { background-color: rgba(255, 255, 255, 0.2); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold; }
+        .btn-nav { background-color: rgba(255, 255, 255, 0.2); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold; text-decoration: none; }
+        .btn-nav:hover { background-color: rgba(255, 255, 255, 0.4); }
         .btn-nav.active { background-color: #28a745; }
         .form-body { padding: 25px; }
         .form-body h2 { font-size: 20px; color: #333; margin-bottom: 20px; border-bottom: 2px solid #eaeaea; padding-bottom: 8px; }
@@ -29,8 +30,8 @@
     <div class="header">
         <h1>IntegraSalud</h1>
         <div class="nav-buttons">
-            <button class="btn-nav active">Crear Expediente</button>
-            <button class="btn-nav">Visualizar Expediente</button>
+            <a href="index.html" class="btn-nav active">Crear Expediente</a>
+            <a href="visualizar.html" class="btn-nav">Visualizar Expediente</a>
             <button class="btn-nav">Editar Expediente</button>
             <button class="btn-nav">Nueva Consulta</button>
         </div>
@@ -74,4 +75,3 @@
 </div>
 </body>
 </html>
-
