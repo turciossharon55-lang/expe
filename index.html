@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntegraSalud - Crear Expediente</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { background-color: #f4f6f9; padding: 20px; display: flex; justify-content: center; }
+        .container { width: 100%; max-width: 700px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden; }
+        .header { background-color: #0056b3; padding: 20px; text-align: center; color: white; }
+        .header h1 { font-size: 24px; margin-bottom: 15px; }
+        .nav-buttons { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+        .btn-nav { background-color: rgba(255, 255, 255, 0.2); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold; }
+        .btn-nav.active { background-color: #28a745; }
+        .form-body { padding: 25px; }
+        .form-body h2 { font-size: 20px; color: #333; margin-bottom: 20px; border-bottom: 2px solid #eaeaea; padding-bottom: 8px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group.full-width { grid-column: span 2; margin-bottom: 15px; }
+        label { font-size: 13px; font-weight: bold; color: #555; margin-bottom: 6px; }
+        input, select, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; background-color: #fdfdfd; width: 100%; }
+        textarea { resize: vertical; height: 70px; }
+        .btn-submit { background-color: #0056b3; color: white; border: none; width: 100%; padding: 14px; font-size: 16px; font-weight: bold; border-radius: 4px; cursor: pointer; margin-top: 15px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>IntegraSalud</h1>
+        <div class="nav-buttons">
+            <button class="btn-nav active">Crear Expediente</button>
+            <button class="btn-nav">Visualizar Expediente</button>
+            <button class="btn-nav">Editar Expediente</button>
+            <button class="btn-nav">Nueva Consulta</button>
+        </div>
+    </div>
+    <form class="form-body">
+        <h2>Crear Expediente</h2>
+        <div class="grid-2">
+            <div class="form-group"><label>Cédula</label><input type="text" placeholder="Ej: 281-050402-100D"></div>
+            <div class="form-group"><label>Nombre</label><input type="text"></div>
+        </div>
+        <div class="grid-2">
+            <div class="form-group"><label>Apellido</label><input type="text"></div>
+            <div class="form-group"><label>Sexo</label><select><option>Masculino</option><option>Femenino</option></select></div>
+        </div>
+        <div class="grid-2">
+            <div class="form-group"><label>Edad</label><input type="number"></div>
+            <div class="form-group"><label>Fecha de nacimiento</label><input type="date"></div>
+        </div>
+        <div class="grid-2">
+            <div class="form-group"><label>Estado civil</label><select><option>Soltero/a</option><option>Casado/a</option></select></div>
+            <div class="form-group"><label>Ocupación</label><input type="text"></div>
+        </div>
+        <div class="grid-2">
+            <div class="form-group"><label>Teléfono</label><input type="tel"></div>
+            <div class="form-group"><label>Dirección</label><input type="text"></div>
+        </div>
+        <div class="grid-2">
+            <div class="form-group"><label>Contacto de emergencia</label><input type="text"></div>
+            <div class="form-group"><label>Fecha consulta</label><input type="date"></div>
+        </div>
+        <div class="grid-2">
+            <div class="form-group"><label>Hora</label><input type="time"></div>
+            <div class="form-group"><label>Médico</label><input type="text"></div>
+        </div>
+        <div class="form-group full-width"><label>Motivo consulta</label><input type="text"></div>
+        <div class="form-group full-width"><label>Historial Clínico</label><textarea></textarea></div>
+        <div class="form-group full-width"><label>Observaciones</label><textarea></textarea></div>
+        <div class="form-group full-width"><label>Medicación</label><textarea></textarea></div>
+        <button type="button" class="btn-submit">Guardar Expediente</button>
+    </form>
+</div>
+</body>
+</html>
+
